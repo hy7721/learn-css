@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #273444;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+
+.user-card {
+  position: relative;
+  max-width: 240px; 
+  padding: 8px 12px;
+  border: 1px solid #E5EAEF;
+  border-radius: 4px;
+  background-color: #FFF;
+}
+
+.user-card::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.user-photo,
+.user-name {
+  float: left;
+}
+
+.user-photo {
+  position: relative;
+  margin-right: 12px;
+}
+
+.user-photo img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-status {
+  z-index: 1;
+  position: absolute;
+  /* position: absolute의 경우에는 그 요소를 display: block으로 만드는 효과가 있기 때문에 생략 가능.  */
+  /* display: block; */
+  width: 12px;
+  height: 12px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  background-color: #21D891;
+}
+
+.user-name {
+  /* display: inline-block; */
+  margin: 8px 0;
+}
